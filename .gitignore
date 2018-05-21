@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+npm-debug.log
+.editorconfig
+dist/
+.idea/
+rev-css/
+rev-img/
+rev-js/
+package-lock.json
+.idea/
+.vscode/

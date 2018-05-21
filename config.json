@@ -1,0 +1,14 @@
+{
+	"dev":
+	{
+		"api": "test.com"
+	},
+	"test":
+	{
+		"api": "dadaodata.com"
+	},
+	"pro":
+	{
+		"api": "zgxyzx.net"
+	}
+}
