@@ -458,6 +458,10 @@ video {
     background-color: #ec584e;
 }
 
+.bgTheme {
+    background-color: rgba(38, 198, 253, 1);
+}
+
 .lh1 {
     line-height: 1;
 }
@@ -696,4 +700,9 @@ $bgColor: #ec5845) {
 @mixin bg {
     background: rgba(0, 0, 0, 0.3);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#30000000', endColorstr='#30000000')\9;
+}
+
+// users window header
+.header {
+    
 }

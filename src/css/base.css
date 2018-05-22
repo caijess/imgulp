@@ -40,7 +40,7 @@ input {
 
 img {
   max-width: 100%;
-  vertical-align: top; }
+  vertical-align: middle; }
 
 ul,
 ol {
@@ -351,6 +351,9 @@ video {
 
 .bgred {
   background-color: #ec584e; }
+
+.bgTheme {
+  background-color: #26c6fd; }
 
 .lh1 {
   line-height: 1; }
