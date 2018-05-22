@@ -192,7 +192,7 @@ gulp.task('watch', function () {
     gulp.watch('src/sass/*.scss', ['sass']);
     gulp.watch('src/images/*.?(png|jpg|gif|svg)', ['copy']);
 });
-gulp.task('test', ['clean'], runsequence(['clean'], ['cssmin'], ['js'], ['sass'], ['ejs'], ['copy']));
+gulp.task('test', ['clean'], runsequence(['clean'], ['sassmin'], ['js'], ['ejs'], ['copy']));
 gulp.task('server', function () {
     connect.server({
         port: 8018, //指定端口号，在浏览器中输入localhost:8080就可以直接访问生成的html页面
