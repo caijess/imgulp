@@ -1,0 +1,42 @@
+@import './common/base.scss';
+.chart-box {
+    height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding:5px;
+    .msg-item {
+        overflow: hidden;
+        &.from-me {
+            .avatar-box,
+            .msg-text {
+                float: left;
+                background: rgba(229, 229, 229, 1);
+                margin-left: 10px;
+            }
+        }
+        &.from-you {
+            .avatar-box,
+            .msg-text {
+                float: right;
+                background: rgba(166, 212, 242, 1);
+                margin-right: 10px;
+            }
+        }
+        &>div {
+            display: inline-block;
+        }
+        .avatar-box {
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+            img {
+                @include center(32px, 32px);
+            }
+        }
+        .msg-text {
+            padding: 10px;
+        }
+    }
+}

@@ -701,8 +701,14 @@ $bgColor: #ec5845) {
     background: rgba(0, 0, 0, 0.3);
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#30000000', endColorstr='#30000000')\9;
 }
-
-// users window header
-.header {
-    
+// window center
+@mixin center($width,
+$height) {
+    width: $width;
+    height: $height;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -($height) / 2;
+    margin-left: -($width) / 2;
 }
