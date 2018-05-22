@@ -22,9 +22,7 @@ var gutil = require('gulp-util');
 var base64 = require('gulp-base64');
 var banner =
     "/** \n\
-  * ZGXYZX WeChat V" + pkg.version + " \n\
-* Power By 言川\n\
-* Create By Ben,Caijs\n\
+* Create By Caijs\n\
 * Copyright © 2017 www.zgxyzx.net All Right Reserved\n\
 */\n";
 
