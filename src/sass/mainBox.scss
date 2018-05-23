@@ -3,15 +3,49 @@
     height: 400px;
     overflow-y: auto;
     overflow-x: hidden;
-    padding:5px;
+    padding: 5px;
     .msg-item {
         overflow: hidden;
+        margin-top: 20px;
+        color: #000;
         &.from-me {
+            position: relative;
             .avatar-box,
             .msg-text {
                 float: left;
                 background: rgba(229, 229, 229, 1);
                 margin-left: 10px;
+            }
+            .after {
+                position: absolute;
+                bottom: 0;
+            }
+        }
+        &.from-sys {
+            overflow: hidden;
+            background: rgba(229, 229, 229, 1);
+            width: 450px;
+            padding: 10px;
+            margin: 20px auto 0;
+            .msg-text {
+                padding: 0;
+                .msg-content {
+                    width: 430px;
+                    margin: 0 auto;
+                    padding: 5px;
+                    background: #fff;
+                    h5 {
+                        font-size: 14px;
+                        margin-bottom:5px;
+                    }
+                    p {
+                        font-size:12px;
+                        color: rgba(0, 0, 0, 0.447058823529412);
+                    }
+                }
+                .sys-btn-group {
+                    text-align: right;
+                }
             }
         }
         &.from-you {
@@ -20,6 +54,55 @@
                 float: right;
                 background: rgba(166, 212, 242, 1);
                 margin-right: 10px;
+            }
+        }
+        &.sys-box {
+            .msg-text {
+                width: 430px;
+                font-size: 14px;
+                h4 {
+                    padding-bottom: 10px;
+                    color: #233273;
+                    font-size: 16px;
+                }
+                ol {
+                    border-bottom: 2px solid #E2E2E2;
+                    li {
+                        padding-bottom: 10px;
+                        color: rgba(0, 0, 0, 0.847058823529412);
+                        &.report {
+                            background: #fff;
+                            padding: 10px;
+                            margin-bottom: 10px;
+                            .text-wrap {
+                                height: 40px;
+                                width: 100%;
+                                margin-bottom: 20px;
+                                p {
+                                    font-size: 14px;
+                                }
+                            }
+                            .time {
+                                color: rgba(0, 0, 0, 0.447058823529412);
+                            }
+                            .dealWith {
+                                color: #F04764;
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn {
+            display: inline-block;
+            background: #fff;
+            color: rgba(0, 0, 0, 0.647058823529412);
+            padding: 5px;
+            margin-top: 10px;
+            border-radius: 2px;
+            &:not(.first) {
+                margin-left: 10px;
             }
         }
         &>div {
@@ -38,5 +121,17 @@
         .msg-text {
             padding: 10px;
         }
+    } // btn icon
+    .icon-refresh {
+        @include icon (17px, 17px, '../images/refresh.png')
+    }
+    .icon-list {
+        @include icon (17px, 17px, '../images/list.png')
+    }
+    .icon-bad {
+        @include icon (17px, 17px, '../images/bad.png')
+    }
+    .icon-good {
+        @include icon (17px, 17px, '../images/good.png')
     }
 }

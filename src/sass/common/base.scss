@@ -712,3 +712,11 @@ $height) {
     margin-top: -($height) / 2;
     margin-left: -($width) / 2;
 }
+@mixin icon($width,$height,$url){
+    display:inline-block;
+    cursor: pointer;
+    width:$width;
+    height:$height;
+    vertical-align: middle;
+    background:url($url) no-repeat center center;
+}
