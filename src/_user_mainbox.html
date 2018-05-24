@@ -114,7 +114,7 @@
     </div>
     <!-- 系统信息 -->
     <div class="msg-item from-sys sys-box">
-     
+
         <div class="msg-text">
             <h4>请核对您的报障信息</h4>
             <div class="msg-content">
@@ -139,6 +139,35 @@
 
 
     </div>
+    <!-- 评价框 -->
+    <div class="msg-item from-sys sys-box">
+        <div class="msg-text">
+            <div class="msg-content">
+                <div class="checked-group">
+                    <i class="icon-checked"></i>
+                    <input type="radio" name="group1" value="1" style="display:none">
+                    <label for="group1">问题已解决</label>
+                    <i class="icon-unchecked"></i>
+                    <input type="radio" name="group1" value="2" style="display:none">
+                    <label for="group1"> 问题未解决，需要继续咨询</label>
+                </div>
+                <div>
+                    <span>您对本次服务的平均是</span>
+                </div>
+                <div>
+                    <span>填写意见：</span>
+                    <textarea name="" id="" cols="46" rows="5" placeholder="有话要说" style="resize:none"></textarea>
+                </div>
+            </div>
+            <div class="sys-btn-group">
+                <a class="btn first">
+                    <span>提交</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
 </div>
 <script>
     $(document).ready(function () {

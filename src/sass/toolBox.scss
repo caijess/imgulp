@@ -1,0 +1,32 @@
+@import './common/common.scss';
+.tool-box {
+    width: 98%;
+    height: 20px;
+    padding: 5px;
+    border-top:1px solid #E4E4E4;
+    ul {
+     
+        li {
+            float:left;
+            padding:5px;
+            &.right {
+                float: right;
+                margin-right:20px;
+                line-height: 25px;
+            }
+        }
+        
+    }
+    .icon-emoji {
+        @include icon(20px, 20px, '../images/emoji.png')
+    }
+    .icon-file {
+        @include icon(20px, 20px, '../images/file.png')
+    }
+    .icon-cut {
+        @include icon(20px, 20px, '../images/cut.png')
+    }
+    .icon-pic {
+        @include icon(20px, 20px, '../images/pic.png')
+    }
+}

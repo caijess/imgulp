@@ -1,0 +1,98 @@
+// triangle 三角箭头
+// 可采用空元素或伪元素生成，具体定位这里不涉及
+%triangle-basic {
+    position: absolute;
+    content: "";
+    height: 0;
+    width: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+@mixin triangle($direction: top, $borderWidth: 6px, $borderColor: #ccc) {
+    @extend %triangle-basic;
+    @if $direction==top {
+        border-top: $borderWidth solid $borderColor;
+        border-left: $borderWidth dashed transparent;
+        border-right: $borderWidth dashed transparent;
+    }
+    @else if $direction==right {
+        border-right: $borderWidth solid $borderColor;
+        border-top: $borderWidth dashed transparent;
+        border-bottom: $borderWidth dashed transparent;
+    }
+    @else if $direction==bottom {
+        border-bottom: $borderWidth solid $borderColor;
+        border-left: $borderWidth dashed transparent;
+        border-right: $borderWidth dashed transparent;
+    }
+    @else if $direction==left {
+        border-left: $borderWidth solid $borderColor;
+        border-top: $borderWidth dashed transparent;
+        border-bottom: $borderWidth dashed transparent;
+    }
+}
+
+//设置按钮
+@mixin btn($fontSize: 16px, $color: #fff, $bgColor: #ec5845) {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    font-size: $fontSize;
+    text-align: center;
+    line-height: 2.33333333;
+    border-radius: 5px;
+    overflow: hidden;
+    color: $color;
+    background: #ec5845;
+}
+
+//单行隐藏
+@mixin ell {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+// transition
+@mixin tran {
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+@mixin flex {
+    display: -webkit-box; //旧语法
+    display: -webkit-flex; //新语法
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin bg {
+    background: rgba(0, 0, 0, 0.3);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#30000000', endColorstr='#30000000')\9;
+}
+
+// window center
+@mixin center($width, $height) {
+    width: $width;
+    height: $height;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -($height) / 2;
+    margin-left: -($width) / 2;
+}
+
+@mixin icon($width, $height, $url) {
+    display: inline-block;
+    cursor: pointer;
+    width: $width;
+    height: $height;
+    vertical-align: middle;
+    background: url($url) no-repeat center center;
+}

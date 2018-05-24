@@ -1,6 +1,6 @@
-@import './common/base.scss';
+@import './common/common.scss';
 .chart-box {
-    height: 400px;
+    height: 380px;
     overflow-y: auto;
     overflow-x: hidden;
     padding: 5px;
@@ -13,7 +13,7 @@
             .avatar-box,
             .msg-text {
                 float: left;
-                background: rgba(229, 229, 229, 1);
+                background: #e5e5e5;
                 margin-left: 10px;
             }
             .after {
@@ -23,24 +23,27 @@
         }
         &.from-sys {
             overflow: hidden;
-            background: rgba(229, 229, 229, 1);
+            background: #e5e5e5;
             width: 450px;
             padding: 10px;
             margin: 20px auto 0;
             .msg-text {
                 padding: 0;
                 .msg-content {
-                    width: 430px;
+                    width: 100%;
                     margin: 0 auto;
                     padding: 5px;
                     background: #fff;
+                    &>div {
+                        margin-bottom: 15px;
+                    }
                     h5 {
                         font-size: 14px;
-                        margin-bottom:5px;
+                        margin-bottom: 5px;
                     }
                     p {
-                        font-size:12px;
-                        color: rgba(0, 0, 0, 0.447058823529412);
+                        font-size: 12px;
+                        color: rgba(0, 0, 0, 0.447);
                     }
                 }
                 .sys-btn-group {
@@ -52,7 +55,7 @@
             .avatar-box,
             .msg-text {
                 float: right;
-                background: rgba(166, 212, 242, 1);
+                background: #a6d4f2;
                 margin-right: 10px;
             }
         }
@@ -69,7 +72,7 @@
                     border-bottom: 2px solid #E2E2E2;
                     li {
                         padding-bottom: 10px;
-                        color: rgba(0, 0, 0, 0.847058823529412);
+                        color: #000;
                         &.report {
                             background: #fff;
                             padding: 10px;
@@ -83,7 +86,7 @@
                                 }
                             }
                             .time {
-                                color: rgba(0, 0, 0, 0.447058823529412);
+                                color: #000;
                             }
                             .dealWith {
                                 color: #F04764;
@@ -97,7 +100,7 @@
         .btn {
             display: inline-block;
             background: #fff;
-            color: rgba(0, 0, 0, 0.647058823529412);
+            color: #000;
             padding: 5px;
             margin-top: 10px;
             border-radius: 2px;
@@ -133,5 +136,17 @@
     }
     .icon-good {
         @include icon (17px, 17px, '../images/good.png')
+    }
+    .icon-checked {
+        @include icon(20px, 15px, '../images/checked.png')
+    }
+    .icon-unchecked {
+        @include icon(20px, 15px, '../images/unchecked.png')
+    }
+    .icon-emoji {
+        @include icon(20px, 20px, '../image/emoji.png')
+    }
+    .icon-file {
+        @include icon(20px, 20px, '../image/file.png')
     }
 }

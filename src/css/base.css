@@ -23,6 +23,12 @@ textarea {
   color: #333;
   font: 14px/1.4 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif; }
 
+textarea {
+  vertical-align: top; }
+
+label {
+  vertical-align: middle; }
+
 h1,
 h2,
 h3,

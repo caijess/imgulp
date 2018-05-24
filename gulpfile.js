@@ -23,7 +23,6 @@ var base64 = require('gulp-base64');
 var banner =
     "/** \n\
 * Create By Caijs\n\
-* Copyright © 2017 www.zgxyzx.net All Right Reserved\n\
 */\n";
 
 var knowOptions = {
@@ -34,7 +33,7 @@ var knowOptions = {
 };
 var options = minimist(process.argv.slice(2), knowOptions);
 gulp.task('clean', function () {
-    return gulp.src('./dist')
+    return gulp.src(['./dist','./src/css'])
         .pipe(clean());
 });
 //生成filename文件，存入string内容
